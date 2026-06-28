@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct IOSAssignment6App: App {
+    @StateObject private var settings = SettingsStore()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(settings)
         }
     }
 }
